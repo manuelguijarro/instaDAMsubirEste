@@ -11,7 +11,7 @@
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:gravity="center_vertical"
-        android:text="Título publicación"
+        android:text="@string/tituloPublic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -24,7 +24,7 @@
         android:layout_width="254dp"
         android:layout_height="42dp"
         android:gravity="center_vertical"
-        android:text="Compartir publica o sólo con amigos"
+        android:text="@string/modoPublic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.636"
@@ -37,7 +37,7 @@
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:ems="10"
-        android:hint="Titulo"
+        android:hint="@string/tituloInput"
         android:inputType="text"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,7 +52,7 @@
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:gravity="center_vertical"
-        android:text="Ubicación publicación"
+        android:text="@string/ubicPublic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -65,7 +65,7 @@
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:gravity="center_vertical"
-        android:text="Descripción publicación"
+        android:text="@string/descripPublic"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
         android:background="#07A18C"
         android:backgroundTint="#957B7B"
         android:gravity="center_vertical"
-        android:text="AÑADE UNA PUBLICACIÓN"
+        android:text="@string/añadirPublic"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -99,7 +99,7 @@
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:ems="10"
-        android:hint="Ubicación"
+        android:hint="@string/ubiInput"
         android:inputType="text"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -124,6 +124,7 @@
         app:layout_constraintVertical_bias="0.493" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="214dp"
         android:layout_height="102dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,12 +138,24 @@
             android:id="@+id/radioButton"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:text="Pública" />
+            android:text="@string/publica" />
 
         <RadioButton
             android:id="@+id/radioButton2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Solo amigos" />
+            android:text="@string/amigos" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="133dp"
+        android:layout_height="44dp"
+        android:backgroundTint="#957B7B"
+        android:text="@string/publicar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.816" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,7 @@ import java.util.List;
 
 public class PublicacionFragment extends Fragment {
 
-    private List<Publicacion> publicaciones = new ArrayList<>();
+    private static List<Publicacion> publicaciones = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

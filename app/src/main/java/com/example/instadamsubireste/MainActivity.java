@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
-    private PublicacionFragment fragment;
+    private Fragment fragment;
     private FragmentContainerView fragmentContainerView;
 
     @Override
@@ -23,21 +23,21 @@ public class MainActivity extends AppCompatActivity {
         fragment = new PublicacionFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,fragment).commit();
 
-       /* bottomNavigationView.setOnItemSelectedListener(item -> {
+       bottomNavigationView.setOnItemSelectedListener(item -> {
             int idItem = item.getItemId();
             if(idItem == R.id.boton_inicio){
-                fragment = new InicioFragment();
+                 fragment = new PublicacionFragment();
             }
             if(idItem == R.id.boton_aniadir){
-                fragment = new InicioFragment();
+                 fragment = new AniadirFragment();
             }
             if(idItem == R.id.boton_buscar){
-                fragment = new InicioFragment();
+                //fragment = new InicioFragment();
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,fragment).commit();
 
             return true;
-        });*/
+        });
     }
 
     @Override

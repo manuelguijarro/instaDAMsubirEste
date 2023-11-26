@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">instaDAMsubirEste</string>
+    <string name="app_name">instaDAM</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="añadirPublic">AÑADE UNA PUBLICACION</string>
+    <string name="inicio">Inicio</string>
+    <string name="buscar">Buscar</string>
+    <string name="publicar">Publicar</string>
+    <string name="tituloInput">Título</string>
+    <string name="ubiInput">Ubicación</string>
+    <string name="publicarButton">Publicar</string>
+    <string name="tituloPublic">Título publicación</string>
+    <string name="ubicPublic">Ubicación publicación</string>
+    <string name="descripPublic">Descripción publicación</string>
+    <string name="modoPublic">Compartir publica o sólo con amigos</string>
+    <string name="publica">Pública</string>
+    <string name="amigos">Solo amigos</string>
+
+
 </resources>
