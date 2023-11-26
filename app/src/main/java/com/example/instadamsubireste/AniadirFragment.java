@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.LinkedList;
 
@@ -34,8 +35,9 @@ public class AniadirFragment extends Fragment {
                 String ubicacionPublicacion = String.valueOf(inputUbicacion.getText());
                 String descripcionPublicacion = String.valueOf(inputDescripcion.getText());
                 int id = publicaciones.size()+2;
+                Toast notificacion = Toast.makeText(getContext(),"Se ha añadido una publicación nueva", Toast.LENGTH_LONG);
                 publicaciones.addFirst(new Publicacion(id,tituloPublicacion,ubicacionPublicacion,descripcionPublicacion));
-
+                notificacion.show();
             }
         });
         return  view;
