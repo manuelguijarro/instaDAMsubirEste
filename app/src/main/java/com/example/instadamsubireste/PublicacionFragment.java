@@ -31,7 +31,7 @@ public class PublicacionFragment extends Fragment {
         //De esta manera nos aseguramos que se carge una vez solo si esta vacía, si no se nos duplicaría
         //cada vez que cargamos el fragmento.
         if(publicaciones.isEmpty()){
-            publicaciones.add(new Publicacion(1,"nueva york 2023","Mérida,Badajoz", "vacaciones 2023"));
+            publicaciones.add(new Publicacion(1,"nueva york 2023","Mérida,Badajoz", "vacaciones 2023","casablanca"));
             //publicaciones.add(new Publicacion(2,"nueva york 2023", "Nueva York, EEUU","Viaje a nueva york"));
         }
 

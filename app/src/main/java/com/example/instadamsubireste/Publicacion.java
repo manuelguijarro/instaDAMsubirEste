@@ -7,13 +7,15 @@ public class Publicacion {
     private String autorPublicacion;
     private String descripcionPublicacion;
     private String ubicacionPublicacion;
+    private String drawableTitulo;
 
-    public Publicacion(int id, String tituloPublicacion, String ubicacionPublicacion, String descripcionPublicacion) {
+    public Publicacion(int id, String tituloPublicacion, String ubicacionPublicacion, String descripcionPublicacion,String drawableTitulo) {
         this.id = id;
         this.tituloPublicacion = tituloPublicacion;
         this.ubicacionPublicacion = ubicacionPublicacion;
         this.autorPublicacion = "Manuel Guijarro Sánchez";
         this.descripcionPublicacion = descripcionPublicacion;
+        this.drawableTitulo = drawableTitulo;
     }
     public Publicacion( String autorPublicacion, String descripcionPublicacion) {
 
@@ -30,6 +32,14 @@ public class Publicacion {
 
     public void setUbicacionPublicacion(String ubicacionPublicacion) {
         this.ubicacionPublicacion = ubicacionPublicacion;
+    }
+
+    public String getDrawableTitulo() {
+        return drawableTitulo;
+    }
+
+    public void setDrawableTitulo(String drawableTitulo) {
+        this.drawableTitulo = drawableTitulo;
     }
 
     public void setId(int id) {
