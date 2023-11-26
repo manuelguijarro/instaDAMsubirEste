@@ -1,5 +1,6 @@
 package com.example.instadamsubireste;
 
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,7 +36,9 @@ public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.
         holder.textViewTitulo.setText(publicacion.getTituloPublicacion());
         holder.textViewUbicacion.setText(publicacion.getUbicacionPublicacion());
         holder.textViewDescripcion.setText(publicacion.getDescripcionPublicacion());
-    }
+        int imageResourceId = holder.itemView.getContext().getResources().getIdentifier(publicacion.getUrlImagen(), "drawable", holder.itemView.getContext().getPackageName());
+        Drawable imageDrawable = holder.itemView.getContext().getResources().getDrawable(imageResourceId);
+        holder.imageViewPublicacion.setImageDrawable(imageDrawable);    }
 
     @Override
     public int getItemCount() {
