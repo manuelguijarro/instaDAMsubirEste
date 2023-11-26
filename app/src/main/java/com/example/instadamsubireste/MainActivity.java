@@ -9,10 +9,14 @@ import android.view.Menu;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottomNavigationView;
     private Fragment fragment;
     private FragmentContainerView fragmentContainerView;
+    public static List<Publicacion> publicaciones = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

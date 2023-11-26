@@ -1,5 +1,7 @@
 package com.example.instadamsubireste;
 
+import static com.example.instadamsubireste.MainActivity.publicaciones;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,7 +17,7 @@ import java.util.List;
 
 public class PublicacionFragment extends Fragment {
 
-    private static List<Publicacion> publicaciones = new ArrayList<>();
+    //private static List<Publicacion> publicaciones = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
