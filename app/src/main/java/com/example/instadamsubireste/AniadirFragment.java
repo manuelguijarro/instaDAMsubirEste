@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
+import java.util.LinkedList;
+
 
 public class AniadirFragment extends Fragment {
 
@@ -27,11 +29,13 @@ public class AniadirFragment extends Fragment {
         buttonPublicar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String tituloPublicacion = String.valueOf(inputTitulo.getText());
                 String ubicacionPublicacion = String.valueOf(inputUbicacion.getText());
                 String descripcionPublicacion = String.valueOf(inputDescripcion.getText());
-                int id = publicaciones.size()+1;
-                publicaciones.add(new Publicacion(id,tituloPublicacion,ubicacionPublicacion,descripcionPublicacion));
+                int id = publicaciones.size()+2;
+                publicaciones.addFirst(new Publicacion(id,tituloPublicacion,ubicacionPublicacion,descripcionPublicacion));
+
             }
         });
         return  view;

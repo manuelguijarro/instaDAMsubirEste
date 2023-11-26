@@ -3,18 +3,20 @@ package com.example.instadamsubireste;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.PublicacionViewHolder> {
 
-    private List<Publicacion> publicaciones;
+    private LinkedList<Publicacion> publicaciones;
 
-    public PublicacionAdapter(List<Publicacion> publicaciones) {
+    public PublicacionAdapter(LinkedList<Publicacion> publicaciones) {
         this.publicaciones = publicaciones;
     }
 
@@ -30,7 +32,7 @@ public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.
     public void onBindViewHolder(@NonNull PublicacionViewHolder holder, int position) {
         Publicacion publicacion = publicaciones.get(position);
         holder.textViewAutor.setText(publicacion.getAutorPublicacion());
-        holder.textViewTitulo.setText(publicacion.getAutorPublicacion());
+        holder.textViewTitulo.setText(publicacion.getTituloPublicacion());
         holder.textViewUbicacion.setText(publicacion.getUbicacionPublicacion());
         holder.textViewDescripcion.setText(publicacion.getDescripcionPublicacion());
     }
@@ -45,6 +47,7 @@ public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.
         TextView textViewTitulo;
         TextView textViewUbicacion;
         TextView textViewDescripcion;
+        ImageView imageViewPublicacion;
 
 
         PublicacionViewHolder(@NonNull View itemView) {
@@ -53,6 +56,7 @@ public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.
             textViewTitulo = itemView.findViewById(R.id.textViewTitulo);
             textViewUbicacion = itemView.findViewById(R.id.textViewUbicacion);
             textViewDescripcion = itemView.findViewById(R.id.textViewDescripcion);
+            imageViewPublicacion = itemView.findViewById(R.id.imageViewPublicacion);
         }
     }
 }
