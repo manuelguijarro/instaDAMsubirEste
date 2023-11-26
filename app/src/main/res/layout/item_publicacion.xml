@@ -6,16 +6,37 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textViewDescripcion"
+        android:id="@+id/textViewAutor"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:paddingTop="8dp"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textViewTexto"
+        android:id="@+id/textViewTitulo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="51dp"
         android:paddingTop="8dp"
-        android:textSize="16sp"/>
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewUbicacion"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:paddingTop="8dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:paddingTop="8dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textViewTexto4"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:paddingTop="8dp"
+        android:textSize="16sp" />
 </LinearLayout>

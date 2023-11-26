@@ -29,7 +29,9 @@ public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.
     @Override
     public void onBindViewHolder(@NonNull PublicacionViewHolder holder, int position) {
         Publicacion publicacion = publicaciones.get(position);
-        holder.textViewTexto.setText(publicacion.getAutorPublicacion());
+        holder.textViewAutor.setText(publicacion.getAutorPublicacion());
+        holder.textViewTitulo.setText(publicacion.getAutorPublicacion());
+        holder.textViewUbicacion.setText(publicacion.getUbicacionPublicacion());
         holder.textViewDescripcion.setText(publicacion.getDescripcionPublicacion());
     }
 
@@ -39,13 +41,18 @@ public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.
     }
 
     static class PublicacionViewHolder extends RecyclerView.ViewHolder {
+        TextView textViewAutor;
+        TextView textViewTitulo;
+        TextView textViewUbicacion;
         TextView textViewDescripcion;
-        TextView textViewTexto;
+
 
         PublicacionViewHolder(@NonNull View itemView) {
             super(itemView);
+            textViewAutor = itemView.findViewById(R.id.textViewAutor);
+            textViewTitulo = itemView.findViewById(R.id.textViewTitulo);
+            textViewUbicacion = itemView.findViewById(R.id.textViewUbicacion);
             textViewDescripcion = itemView.findViewById(R.id.textViewDescripcion);
-            textViewTexto = itemView.findViewById(R.id.textViewTexto);
         }
     }
 }

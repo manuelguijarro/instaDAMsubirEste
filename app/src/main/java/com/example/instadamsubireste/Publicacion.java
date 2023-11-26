@@ -6,12 +6,13 @@ public class Publicacion {
     private String urlImagen;
     private String autorPublicacion;
     private String descripcionPublicacion;
+    private String ubicacionPublicacion;
 
-    public Publicacion(int id, String tituloPublicacion, String urlImagen, String autorPublicacion, String descripcionPublicacion) {
+    public Publicacion(int id, String tituloPublicacion, String ubicacionPublicacion, String descripcionPublicacion) {
         this.id = id;
         this.tituloPublicacion = tituloPublicacion;
-        this.urlImagen = urlImagen;
-        this.autorPublicacion = autorPublicacion;
+        this.ubicacionPublicacion = ubicacionPublicacion;
+        this.autorPublicacion = "Manuel Guijarro Sánchez";
         this.descripcionPublicacion = descripcionPublicacion;
     }
     public Publicacion( String autorPublicacion, String descripcionPublicacion) {
@@ -21,6 +22,14 @@ public class Publicacion {
     }
     public int getId() {
         return id;
+    }
+
+    public String getUbicacionPublicacion() {
+        return ubicacionPublicacion;
+    }
+
+    public void setUbicacionPublicacion(String ubicacionPublicacion) {
+        this.ubicacionPublicacion = ubicacionPublicacion;
     }
 
     public void setId(int id) {

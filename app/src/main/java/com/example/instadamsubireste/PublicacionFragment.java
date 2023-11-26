@@ -27,10 +27,13 @@ public class PublicacionFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(new PublicacionAdapter(publicaciones));
-
         // Agrega algunas publicaciones de ejemplo
-        publicaciones.add(new Publicacion("pako", "vacaciones 2023"));
-        publicaciones.add(new Publicacion("Manuel GUijarro Sanchez", "vacaciones 2023"));
+        //De esta manera nos aseguramos que se carge una vez solo si esta vacía, si no se nos duplicaría
+        //cada vez que cargamos el fragmento.
+        if(publicaciones.isEmpty()){
+            publicaciones.add(new Publicacion(1,"Vacaciones 2023","Mérida,Badajoz", "vacaciones 2023"));
+            publicaciones.add(new Publicacion(2,"nueva york 2023", "Nueva York, EEUU","Viaje a nueva york"));
+        }
 
         return view;
     }

@@ -19,21 +19,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.147" />
 
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="254dp"
-        android:layout_height="42dp"
-        android:gravity="center_vertical"
-        android:text="@string/modoPublic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.583" />
-
     <EditText
-        android:id="@+id/editTextTextAutor"
+        android:id="@+id/editTextTitulo"
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -95,7 +82,7 @@
         app:layout_constraintVertical_bias="0.053" />
 
     <EditText
-        android:id="@+id/editTextTextDescripcion"
+        android:id="@+id/editTextUbicacion"
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:ems="10"
@@ -110,7 +97,7 @@
         app:layout_constraintVertical_bias="0.339" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/editTextDescripcion"
         android:layout_width="210dp"
         android:layout_height="81dp"
         android:ems="10"
@@ -123,30 +110,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.493" />
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="214dp"
-        android:layout_height="102dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.705">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="210dp"
-            android:layout_height="wrap_content"
-            android:text="@string/publica" />
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/amigos" />
-    </RadioGroup>
-
     <Button
         android:id="@+id/buttonPublicar"
         android:layout_width="133dp"
@@ -155,7 +118,9 @@
         android:text="@string/publicar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.641" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
