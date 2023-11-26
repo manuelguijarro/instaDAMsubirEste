@@ -36,9 +36,15 @@ public class PublicacionAdapter extends RecyclerView.Adapter<PublicacionAdapter.
         holder.textViewTitulo.setText(publicacion.getTituloPublicacion());
         holder.textViewUbicacion.setText(publicacion.getUbicacionPublicacion());
         holder.textViewDescripcion.setText(publicacion.getDescripcionPublicacion());
-        int imageResourceId = holder.itemView.getContext().getResources().getIdentifier(publicacion.getUrlImagen(), "drawable", holder.itemView.getContext().getPackageName());
-        Drawable imageDrawable = holder.itemView.getContext().getResources().getDrawable(imageResourceId);
-        holder.imageViewPublicacion.setImageDrawable(imageDrawable);    }
+        if (publicacion.getUrlImagen() != null) {
+            int imageResourceId = holder.itemView.getContext().getResources().getIdentifier(publicacion.getUrlImagen(), "drawable", holder.itemView.getContext().getPackageName());
+            Drawable imageDrawable = holder.itemView.getContext().getResources().getDrawable(imageResourceId);
+            holder.imageViewPublicacion.setImageDrawable(imageDrawable);
+        } else {
+            // Si el nombre de la imagen es nulo, puedes manejarlo de alguna manera, por ejemplo, establecer una imagen por defecto.
+            holder.imageViewPublicacion.setImageResource(R.drawable.casablanca);
+        }
+    }
 
     @Override
     public int getItemCount() {

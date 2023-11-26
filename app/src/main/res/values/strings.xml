@@ -5,6 +5,7 @@
     <string name="añadirPublic">AÑADE UNA PUBLICACION</string>
     <string name="buscarPublic">BUSCAR UN USUARIO</string>
     <string name="inicio">Inicio</string>
+    <string name="INICIO">INICIO</string>
     <string name="buscar">Buscar</string>
     <string name="publicar">Publicar</string>
     <string name="tituloInput">Título</string>

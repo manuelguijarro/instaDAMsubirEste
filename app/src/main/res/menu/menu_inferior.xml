@@ -20,4 +20,9 @@
         android:icon="@drawable/search_24px"
         app:showAsAction="always"
         android:title="Buscar" />
+    <item
+        android:id="@+id/boton_configurar"
+        android:icon="@drawable/manufacturing_24px"
+        app:showAsAction="always"
+        android:title="Ajustes" />
 </menu>

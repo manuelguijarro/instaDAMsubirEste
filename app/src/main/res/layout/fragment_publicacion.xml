@@ -7,9 +7,33 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="412dp"
+        android:layout_height="48dp"
+        android:background="#957B7B"
+        android:backgroundTint="#957B7B"
+        android:gravity="center"
+        android:text="   instaDAM"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="412dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="44sp"
+        android:background="#957B7B"
+        android:backgroundTint="#957B7B"
+        android:gravity="center"
+        android:text="@string/INICIO"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="681dp"
+        android:layout_marginTop="250px" />
 
 </FrameLayout>
