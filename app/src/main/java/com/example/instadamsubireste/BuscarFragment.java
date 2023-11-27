@@ -16,7 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.LinkedList;
-
+//Este fragmento se encarga de realizar la busqueda de usuarios, mediante un patron
+//que se introduce en el campo input.
 public class BuscarFragment extends Fragment {
     private EditText editTextInputNombre;
     private Button buttonBuscador;
@@ -26,10 +27,13 @@ public class BuscarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_buscar, container, false);
+        //Esta LinkedList la utilizaremos para añadir los usuarios que coincidan
+        //en el patron de busqueda.
         nuevosUsuarios = new LinkedList<>();
         editTextInputNombre = view.findViewById(R.id.editTextInputNombre);
         buttonBuscador = view.findViewById(R.id.buttonBuscador);
-
+        //Si nuestra lista de usuarios esta vacía como pasa al inicio de la carga de la app
+        // nosotros precargamos unos usuarios para que aparezcan como ejemplo.
         if(usuarios.isEmpty()){
             usuarios.add(new Usuario(0,"Manuel Guijarro Sánchez","manu2506.1994@gmail.com"));
             usuarios.add(new Usuario(1,"Francisco Javier Casado Asensio","fjpaco.asens@gmail.com"));
@@ -37,19 +41,25 @@ public class BuscarFragment extends Fragment {
         }
         RecyclerView recyclerView = view.findViewById(R.id.recyclerUsuarios);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        //Despues seteamos el nuevo adaptador con la clase UsuarioAdapter(previamente creada)
         recyclerView.setAdapter(new UsuarioAdapter(usuarios));
-
+        /*
+        El buttonBuscador al ser pulsado realiza la funcion de buscar en nuestra LinkedList de usuarios
+        el patron que coincide:
+        usuario.getNombreUsuario().contains(nombreUsuario)
+        y el resultado lo volcamos en una nueva linkedlist para mostrar.
+         */
         buttonBuscador.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String nombreUsuario = String.valueOf(editTextInputNombre.getText());
                 for(Usuario usuario:usuarios){
                     if(usuario.getNombreUsuario().contains(nombreUsuario)){
+                       //los añadimos a nuestra linkedlist de usuarios, los que coinciden
+                        //para luego setearlo con la nueva linkedlist
                         nuevosUsuarios.add(usuario);
                     }
                 }
-                //recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-
                 recyclerView.setAdapter(new UsuarioAdapter(nuevosUsuarios));
             }
         });

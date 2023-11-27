@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton floatingActionButton;
     private Boolean estadoCancion;
     private MediaPlayer myMediaPlayer;
+    /*
+       Con esta funcion comprobamos si el estado de la cancion esta en funcionamiento o en cambio
+       esta parada, y mediante la comprobacion, moficamos su estado y devolvemos el booleano, para cuando
+       se vuelva a pulsar el boton
+     */
     public boolean  activarCancion(Boolean estadoCancion){
         if(estadoCancion){
             myMediaPlayer.pause();
@@ -41,17 +46,22 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.menu_inferior);
         fragmentContainerView = findViewById(R.id.fragmentContainerView);
         fragment = new PublicacionFragment();
+        //MediaPlayer es la API principal para reproducir sonido y video que nos proporciona Android Studio.
         myMediaPlayer = MediaPlayer.create(this, R.raw.qyevedo);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,fragment).commit();
-
-        floatingActionButton = findViewById(R.id.floatingActionButton2);
         estadoCancion = false;
+        floatingActionButton = findViewById(R.id.floatingActionButton2);
+        /*
+        Con este metodo, al hacer click en el evento del boton flotante, llamamos a la funcion
+        activarCancion y comprobamos el estado de la cancion, para realizar una funcion o otra.
+         */
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 estadoCancion = activarCancion(estadoCancion);
             }
         });
+        //Con este boton controlamos los eventos al pulsar el menu inferior(para cargar Fragmentos)
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int idItem = item.getItemId();
             if(idItem == R.id.boton_inicio){
@@ -68,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         });
     }
-
+    //Metodo necesario para poder inflar el menu_inferior
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_inferior, menu);
