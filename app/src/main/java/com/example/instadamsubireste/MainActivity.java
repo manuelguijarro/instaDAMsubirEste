@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private MediaPlayer myMediaPlayer;
     public boolean  activarCancion(Boolean estadoCancion){
         if(estadoCancion){
-            myMediaPlayer.stop();
+            myMediaPlayer.pause();
             estadoCancion = false;
         }else{
             myMediaPlayer.start();
@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
         fragment = new PublicacionFragment();
         myMediaPlayer = MediaPlayer.create(this, R.raw.qyevedo);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,fragment).commit();
-        usuarios.add(new Usuario(0,"Manuel Guijarro Sánchez","manu2506.1994@gmail.com"));
-        usuarios.add(new Usuario(1,"Francisco Javier Casado Asensio","fjpaco.asens@gmail.com"));
-        usuarios.add(new Usuario(2,"Alex Muñoz Sánchez","jonnywalker@gmail.com"));
+
         floatingActionButton = findViewById(R.id.floatingActionButton2);
         estadoCancion = false;
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
