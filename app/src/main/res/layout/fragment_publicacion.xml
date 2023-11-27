@@ -13,6 +13,7 @@
         android:layout_height="48dp"
         android:background="#957B7B"
         android:backgroundTint="#957B7B"
+        android:drawableLeft="@drawable/photo_camera_24px"
         android:gravity="center"
         android:text="   instaDAM"
         android:textAlignment="viewStart"

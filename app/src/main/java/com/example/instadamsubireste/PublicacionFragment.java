@@ -14,10 +14,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//Este es el fragmento el cual nos muestra toda la informacion de las publicaciones
+// es el que se carga cuando hacemos click en el menu inferior sobre "Inicio"
 public class PublicacionFragment extends Fragment {
 
-    //private static List<Publicacion> publicaciones = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

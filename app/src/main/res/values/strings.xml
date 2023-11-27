@@ -12,6 +12,7 @@
     <string name="imagenInput">Imagen</string>
     <string name="usuarioInput">Introduce el nombre de usuario: </string>
     <string name="nombreUsuarioInput">Nombre de usuario </string>
+    <string name="emailUsuarioInput">Email de usuario </string>
     <string name="ubiInput">Ubicación</string>
     <string name="publicarButton">Publicar</string>
     <string name="tituloPublic">Título publicación</string>
@@ -21,6 +22,8 @@
     <string name="modoPublic">Compartir publica o sólo con amigos</string>
     <string name="publica">Pública</string>
     <string name="amigos">Solo amigos</string>
+    <string name="ajustes">AJUSTES</string>
+
 
 
 </resources>
