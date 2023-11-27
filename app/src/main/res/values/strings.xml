@@ -23,6 +23,10 @@
     <string name="publica">Pública</string>
     <string name="amigos">Solo amigos</string>
     <string name="ajustes">AJUSTES</string>
+    <string name="datosUsuario">Datos usuario:</string>
+    <string name="nuevoNombreUsuario">Introduce un nuevo nombre de usuario:</string>
+    <string name="nuevoEmailUsuario">Introduce un nuevo email de usuario:</string>
+    <string name="actualizar">Actualizar</string>
 
 
 

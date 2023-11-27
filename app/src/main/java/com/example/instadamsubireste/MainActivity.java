@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton floatingActionButton;
     private Boolean estadoCancion;
     private MediaPlayer myMediaPlayer;
+    public static Usuario usuarioPrincipal;
     /*
        Con esta funcion comprobamos si el estado de la cancion esta en funcionamiento o en cambio
        esta parada, y mediante la comprobacion, moficamos su estado y devolvemos el booleano, para cuando
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        usuarioPrincipal = new Usuario(1,"Manuel Guijarro Sanchez","manu2506.1994@gmail.com");
         bottomNavigationView = findViewById(R.id.menu_inferior);
         fragmentContainerView = findViewById(R.id.fragmentContainerView);
         fragment = new PublicacionFragment();
@@ -72,6 +74,9 @@ public class MainActivity extends AppCompatActivity {
             }
             if(idItem == R.id.boton_buscar){
                 fragment = new BuscarFragment();
+            }
+            if(idItem == R.id.boton_configurar){
+                fragment = new AjustesFragment();
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerView,fragment).commit();
 

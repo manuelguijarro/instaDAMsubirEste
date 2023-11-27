@@ -54,7 +54,9 @@ public class BuscarFragment extends Fragment {
             public void onClick(View v) {
                 String nombreUsuario = String.valueOf(editTextInputNombre.getText());
                 for(Usuario usuario:usuarios){
-                    if(usuario.getNombreUsuario().contains(nombreUsuario)){
+                    //modificamos los dos toLowerCase para que no tengamos problemas a buscar
+                    // y distinga  entre mayusculas y minisculas
+                    if(usuario.getNombreUsuario().toLowerCase().contains(nombreUsuario.toLowerCase())){
                        //los añadimos a nuestra linkedlist de usuarios, los que coinciden
                         //para luego setearlo con la nueva linkedlist
                         nuevosUsuarios.add(usuario);
